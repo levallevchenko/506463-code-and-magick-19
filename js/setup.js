@@ -105,25 +105,6 @@ var eyesColorInput = setupWindow.querySelector('.setup-wizard-appearance input[n
 var wizardFireball = setupWindow.querySelector('.setup-fireball-wrap');
 var fireballColorInput = wizardFireball.querySelector('input');
 
-// Пыталась упростить и сделать единую функцию, но ерунда какая-то выходит
-// var styleProp = 'fill';
-// if (wizardFireball.style) {
-//   styleProp = 'background';
-// };
-
-// var changeColor = function (wizardItem, property, input, styleItem) {
-//   wizardItem.style.styleItem = property;
-//   input.value = property;
-// };
-
-// console.log(wizards[i].coatColor);
-
-//
-// wizardCoat.addEventListener('click', function () {
-//   changeColor(wizardCoat, wizards[i].coatColor, coatColorInput, styleProp);
-// });
-
-
 var changeCoatColor = function () {
   wizardCoat.style.fill = getRandomElemFromArr(wizardsProperties.WIZARD_COAT_COLORS);
   coatColorInput.value = getRandomElemFromArr(wizardsProperties.WIZARD_COAT_COLORS);
@@ -151,3 +132,21 @@ var changeFireballColor = function () {
 wizardFireball.addEventListener('click', function () {
   changeFireballColor();
 });
+
+// Пыталась упростить и сделать единую функцию, но ерунда какая-то выходит
+// var styleProp = 'fill';
+// if (wizardFireball.style) {
+//   styleProp = 'background';
+// };
+
+// var changeColor = function (wizardItem, property, input, styleItem) {
+//   wizardItem.style.styleItem = property;
+//   input.value = property;
+// };
+
+// console.log(wizards[i].coatColor);
+
+//
+// wizardCoat.addEventListener('click', function () {
+//   changeColor(wizardCoat, wizards[i].coatColor, coatColorInput, styleProp);
+// });
